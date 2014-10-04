@@ -1,0 +1,327 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[paper=a4paper,left=30mm,width=150mm,top=25mm,bottom=25mm]{geometry} 
+\usepackage{fullpage}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{enumitem}
+\usepackage{setspace} % This is used in the title page
+\usepackage{graphicx} % This is used to load the crest in the title page
+\usepackage{subcaption}
+\usepackage{afterpage}
+\usepackage[hidelinks]{hyperref}
+\usepackage[sec\\\
+ion]{placeins}
+
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{booktabs}
+
+\usepackage[parfill]{parskip}
+
+\graphicspath{{./Figures/}}
+\long\def\/*#1*/{}
+
+\usepackage{titlesec}
+
+\begin{document}
+
+% Set up a title page
+\thispagestyle{empty} % no page number on very first page
+% Use roman numerals for page numbers initially
+\renewcommand{\thepage}{\roman{page}}
+
+\begin{spacing}{1.5}
+\begin{center}
+{\Large \bfseries
+Faculty of Information Technology\\
+Monash University}
+
+\vspace*{30mm}
+
+\includegraphics[width=5cm]{MonashCrest}
+
+\vspace*{15mm}
+
+{\large \bfseries
+Literature Review --- Semester 2, 2014
+}
+
+\vspace*{10mm}
+
+{\LARGE \bfseries
+Isolated Region Spatial Query
+}
+
+\vspace*{20mm}
+
+{\large \bfseries
+Jian Loong Liew 22545727
+
+\vspace*{20mm}
+
+Supervisor: Associate Professor David Taniar
+}
+
+\end{center}
+\end{spacing}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+\setcounter{page}{1}
+\renewcommand{\thepage}{\arabic{page}}
+
+\section{Introduction} 
+
+The \textit{Isolated Region} spatial query is a distinctive spatial query
+because of its requirements. It aims to achieve the very nature of being near
+a crowd yet not too far that it is isolated. It is visually easy to determine
+an isolated region given any number of objects bound within a region. However,
+it mathematically solving this in the terms of both the Euclidean and Spatial
+distance is challenging. The input of this query will be a set of static data
+points. $P=\{p_1,....,p_n\}$. Each of these points will denote objects of
+interests (OOIs). The output of this query will be a region, $R$. This region
+will be the coined \textit{Isolated Region}.
+
+In order to propose a query processing solution to this query, the various
+nearest neighbour queries with their query processing solutions will be
+explored. This literature review attempts to categorize the various spatial
+query into different categories and identify the ones of interest with regards
+to solving the spatial query processing scenario at hand. The tradional
+reverse nearest neighbour query only returns objects, however the inverse
+version of these queries will return a region. These queries are also called
+the reverse queries.
+
+Below is a graphical representation of the various spatial queries and the
+various algorithms proposed by authors to solve the scenario at hand. In order
+to begin attempting to propose a query processing solution for the problem at
+hand the understanding of the work done by previous authors in order to solve
+similar problems needs to be understood.
+
+\/*
+\subsection{Overview of Spatial Queries}
+
+This diagram is based on deriving information from ~\cite{taniar2013taxonomy}.
+
+\section{Nearest Neighbour}
+
+The nearest neighbour problem is considered to be one of the best known
+problems in computer science.
+
+\subsection{Range Euclidean Restriction}
+
+~\cite{papadias2003query}. 
+
+\subsection{Aggregate Nearest Neighbour Query}
+
+Aggregate nearest neighbour queries returns the object that minimizes an
+aggregate distance function with respect to a set of query
+points~\cite{yiu2005aggregate}. A scenario for ANN is as follows: Assumming
+for example, $n$ users at location $(q_1,....,q_2)$. An ANN query outputs the
+facility that minimises the sum of distances that the users have to travel in
+order to meet there~\cite{papadias2005aggregate}. Thus, the input for an ANN
+query will be the set of static data points given to it.
+
+\subsection{Constrained Nearest Neighbour}
+
+~\cite{ferhatosmanoglu2001constrained}.
+
+\subsection{Reverse Nearest Neighbour}
+
+A Reverse Nearest Neighbour (RNN) search is a method to retrieve all objects
+that consider the query point as the nearest neighbour. An example would be
+like when a marketing application in which the issue is to determine the
+business impact of opening an outlet of Company \textit{A} at a given
+location. A simple task is to determine the segment of \textit{A}'s customer
+who would be likely to use this new facility~\cite{korn2000influence}. Korn et
+al (2000) broken this down into two cases which are static and dynamic cases
+and also formalised a novel notion of influence based on reverse nearest
+neighbour queries and its variants. Influence sets based on reverse nearest
+neighbour (RNN) queries seem to caputre the notion of influence based on the
+example stated by them.
+
+Cheema et al (2011), suggested a more generic concept called \textbf{influence
+zone} and showed that the influence zone can be used to efficiently compute
+the influence sets. This influence zone has various applications in location
+based services and decision support systems. This is because the influence
+zone may be used for market analysis as well as targeted
+marketing~\cite{cheema2011influence}. This concept is more generic compared to
+the notation of influence set proposed by Korn et al (2000). An RNN query is
+independant of interest, and
+
+\section{Reverse Region Query}
+
+The input of this are objects and the output of this query is a region. 
+
+\section{Group Nearest Neighbour} 
+
+This was proposed by Papadias et al~\cite{papadias2004group}. It is considered
+to be a novel form of Nearest Neighbour search. The GNN query is different
+from the traditional \textit{k}nn query which only specifies a single query
+point, the GNN query has multiple query points. The input of this problem
+consist of  a set of $P=\{p_1,...,p_n\}$ of static data points in multi
+dimensional space and a group of query points. $Q=\{q_1,...,q_n\}$. The ouput
+of this contains the $k>1$ data points~\cite{papadias2004group}.
+
+An example scenario for the GNN would would be to select a meeting place from
+all available meeting places. For example, for three executive directors who
+are located in three different places, to meet at the closest meeting
+place~\cite{taniar2013taxonomy}.
+
+This is considered to be an expensive problem by definition because of the
+number of data points as well as query points it needs to process as it is
+considerably more complex than the traditional \textit{k}nn queries. The
+reason for this complexity is mainly due to two reasons~\cite{li2005two}. The
+first is because there are multiple query points being specified which
+requires more distance computation and the other is because the fact that the
+query point can be distributed within the data space in arbitary ways,
+creating a large search region.
+
+
+\subsection{Multiple Query Method (MQM)}
+
+This algorithm utilises the threshold algorithm where it performs incremental
+NN queries for each point in $Q$ and combines their
+results~\cite{papadias2004group}. The MQM retrieves the NN for every point in
+query set $Q$, it sometimes accesses the same tree nodes for different query
+points and this causes its cost to increase fast with the query set
+cardinality.
+
+\subsection{Single Point Method}
+
+\subsection{Minimum Bounding Method (MBM)}
+
+\subsection{Group Cloest Pair Method}
+
+\subsection{Two Ellipse-based Pruning Method}
+
+Li et al (2005) suggested a distance pruning method using an ellipse. The
+pruning method is ``If a point or an MBR is far away enough with respect to
+the two points we choose as the approximate ellipse, they cannot be in the
+final answer.'' This method is compared to the SPM method and the MBM method.
+The authors claim that this method works more efficiently than both SPM and
+MBM because the ellipse used in the methods are less distance computational
+during the search and can prune unqualified nodes more efficiently. IT is
+noted that the two ellipse-based pruning method can be used in both the depth-
+first and best-first travel paradigms.
+
+\section{Probablistic Group Nearest Query}
+
+~\cite{lian2008probabilistic}.
+
+\section{Group Nearest Group}
+
+Group Nearest Group (GNG) query can be defined as a query which finds one data
+point $p$ from a data point set $D$ such that the total distance from $p$ to
+the points in a query point set $Q$ is minimal~\cite{deng2012group}. This is
+regarded as the generic version of the GNN query. When $k$ = 1, a GNG query is
+reduced to a GNN query. A GNG query can also be called as a k-median
+clustering in operations search which is a partition based clustering problem
+with group data points into $k$ which is a given number of clusters based on
+an optimization objective function.
+
+The scenario of a GNG query is as follows. A security service provider plans
+to set up several new branches to serve several business districts which can
+be represented by a set of land marks, such as well-known buildings. The max
+number of branches is usually on constrainted by factors such as business
+cost. Under this constraint the provider wishes to select branch locationsfrom
+many choices such that the reponse time to security alarms can be minimised
+that is the average distance between these landmarks to the nearest branch is
+minimal.
+
+The GNG algorithm has its useful because it will find a meeting point from a
+set of groups, however it requires 2 set of inputs which are the
+
+The GNG query processing starts by taking an inital subsect of $W_mi$. 
+
+Query points with different weights are also useful in many
+situations~\cite{deng2012group}.
+
+\subsection{Exhaustive Hierarchical Combination Algorithm (EHC)}
+
+\subsection{Subset Hierarchical Replacement Algorithm (SHR)}
+
+\subsection{Comparison of query processing solutions}
+
+\subsection{Zone of Influence}
+ 
+
+\section{Optimum Region} 
+
+An optimum region query is as follows: 
+
+Another spatial query of interest is the \textit{Optimum Region}. This problem
+appears in Euclidean space. Optimum region is defined as a region which
+includes all the points which can cover the maximum number of objects in the
+finite set as the center of a radius \textit{r}~\cite{Xuan2012}. The objective
+of the optimum region search is to find a region where the center of a circle
+with a fixed radius can be located to cover most objects of interest in the
+given set. An example of an optimum region is as follows:
+
+
+\begin{itemize}      
+  \item Build a hospital in a community and let most
+resident reach to the hospital within 20 minutes or 15 km.      
+  \item A company plans to establish a new Wi-Fi base station, the coverage range of
+which is 20 meters, to cover most Wi-Fi   devices in the company.
+\end{itemize}
+
+The input for the optimum region are a set of object of interest and the
+output is the optimum region.
+
+\subsection{Circle Partition and Arcs Superposition (CPAS)}
+This algorithm relies on the polar coordinates of the system.
+
+\section{Skyline Query}
+
+
+\section{Isolated Region}
+
+\section{R-Trees} In order to efficiently solve the query processing in the
+multi dimensional splace, an efficient indexing system has been proposed by
+various authors. An example would be the \textit{R-trees}~\cite{guttman1984r}.
+This has then been further developed and enhanced by various authors. For
+example, a variation of the \textit{R-trees} is the $R^+ -trees$ that avoids
+overlapping rectangles in intermediate nodes of the tree that is
+introduced.~\cite{beckmann1990r}.
+
+\subsection{Rectangle Handling}
+Table from R+ tree goes here.
+
+\section{TPR\* Tree}
+~\cite{tao2003tpr}.
+
+\section{Voronoi Diagram}
+
+\section{Comparison}
+
+The table below list the various spatial queries based on their input, output as well as the various algorithms used.
+
+\begin{tabular}{llr}
+\hline
+\multicolumn{2}{c}{Item} \\
+\cline{1-2}
+Name    & Input \& Output & Algorithm \\
+\hline
+Aggregate Nearest Neighbour      & per gram    & 13.65      \\
+Reverse Nearest Neighbour          & each        & 0.01       \\
+Gnu       & stuffed     & 92.50      \\
+Group Nearest Group (GNG)       & stuffed     & 33.33      \\
+Optimum Region & frozen      & Circle Partition and Arcs Superposition (CPAS)       \\
+\hline
+\end{tabular}
+
+
+
+\clearpage
+\bibliographystyle{plain}
+\bibliography{LiteratureReview}
+
+
+\end{document}

@@ -1,0 +1,29 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Overview of Spatial Queries}{section.1}% 2
+\BOOKMARK [1][-]{section.2}{Nearest Neighbour}{}% 3
+\BOOKMARK [2][-]{subsection.2.1}{Range Euclidean Restriction}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.2}{Aggregate Nearest Neighbour Query}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.3}{Constrained Nearest Neighbour}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.4}{Reverse Nearest Neighbour}{section.2}% 7
+\BOOKMARK [1][-]{section.3}{Reverse Region Query}{}% 8
+\BOOKMARK [1][-]{section.4}{Group Nearest Neighbour}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{Multiple Query Method \(MQM\)}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{Single Point Method}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.3}{Minimum Bounding Method \(MBM\)}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.4}{Group Cloest Pair Method}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.5}{Two Ellipse-based Pruning Method}{section.4}% 14
+\BOOKMARK [1][-]{section.5}{Probablistic Group Nearest Query}{}% 15
+\BOOKMARK [1][-]{section.6}{Group Nearest Group}{}% 16
+\BOOKMARK [2][-]{subsection.6.1}{Exhaustive Hierarchical Combination Algorithm \(EHC\)}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.2}{Subset Hierarchical Replacement Algorithm \(SHR\)}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.3}{Comparison of query processing solutions}{section.6}% 19
+\BOOKMARK [2][-]{subsection.6.4}{Zone of Influence}{section.6}% 20
+\BOOKMARK [1][-]{section.7}{Optimum Region}{}% 21
+\BOOKMARK [2][-]{subsection.7.1}{Circle Partition and Arcs Superposition \(CPAS\)}{section.7}% 22
+\BOOKMARK [1][-]{section.8}{Skyline Query}{}% 23
+\BOOKMARK [1][-]{section.9}{Isolated Region}{}% 24
+\BOOKMARK [1][-]{section.10}{R-Trees}{}% 25
+\BOOKMARK [2][-]{subsection.10.1}{Rectangle Handling}{section.10}% 26
+\BOOKMARK [1][-]{section.11}{TPR Tree}{}% 27
+\BOOKMARK [1][-]{section.12}{Voronoi Diagram}{}% 28
+\BOOKMARK [1][-]{section.13}{Comparison}{}% 29
