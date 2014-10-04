@@ -1,0 +1,95 @@
+\begin{thebibliography}{10}
+
+\bibitem{beckmann1990r}
+Norbert Beckmann, Hans-Peter Kriegel, Ralf Schneider, and Bernhard Seeger.
+\newblock {\em The R*-tree: an efficient and robust access method for points
+  and rectangles}, volume~19.
+\newblock ACM, 1990.
+
+\bibitem{cheema2011influence}
+Muhammad~Aamir Cheema, Xuemin Lin, Wenjie Zhang, and Ying Zhang.
+\newblock Influence zone: Efficiently processing reverse k nearest neighbors
+  queries.
+\newblock In {\em Data Engineering (ICDE), 2011 IEEE 27th International
+  Conference on}, pages 577--588. IEEE, 2011.
+
+\bibitem{deng2012group}
+Ke~Deng, Shazia Sadiq, Xiaofang Zhou, Hu~Xu, Gabriel Pui~Cheong Fung, and
+  Yansheng Lu.
+\newblock On group nearest group query processing.
+\newblock {\em Knowledge and Data Engineering, IEEE Transactions on},
+  24(2):295--308, 2012.
+
+\bibitem{ferhatosmanoglu2001constrained}
+Hakan Ferhatosmanoglu, Ioanna Stanoi, Divyakant Agrawal, and Amr El~Abbadi.
+\newblock Constrained nearest neighbor queries.
+\newblock In {\em Advances in Spatial and Temporal Databases}, pages 257--276.
+  Springer, 2001.
+
+\bibitem{guttman1984r}
+Antonin Guttman.
+\newblock {\em R-trees: a dynamic index structure for spatial searching},
+  volume~14.
+\newblock ACM, 1984.
+
+\bibitem{korn2000influence}
+Flip Korn and S~Muthukrishnan.
+\newblock Influence sets based on reverse nearest neighbor queries.
+\newblock In {\em ACM SIGMOD Record}, volume~29, pages 201--212. ACM, 2000.
+
+\bibitem{li2005two}
+Hongga Li, Hua Lu, Bo~Huang, and Zhiyong Huang.
+\newblock Two ellipse-based pruning methods for group nearest neighbor queries.
+\newblock In {\em Proceedings of the 13th annual ACM international workshop on
+  Geographic information systems}, pages 192--199. ACM, 2005.
+
+\bibitem{lian2008probabilistic}
+Xiang Lian and Lei Chen.
+\newblock Probabilistic group nearest neighbor queries in uncertain databases.
+\newblock {\em Knowledge and Data Engineering, IEEE Transactions on},
+  20(6):809--824, 2008.
+
+\bibitem{papadias2004group}
+Dimitris Papadias, Qiongmao Shen, Yufei Tao, and Kyriakos Mouratidis.
+\newblock Group nearest neighbor queries.
+\newblock In {\em Data Engineering, 2004. Proceedings. 20th International
+  Conference on}, pages 301--312. IEEE, 2004.
+
+\bibitem{papadias2005aggregate}
+Dimitris Papadias, Yufei Tao, Kyriakos Mouratidis, and Chun~Kit Hui.
+\newblock Aggregate nearest neighbor queries in spatial databases.
+\newblock {\em ACM Transactions on Database Systems (TODS)}, 30(2):529--576,
+  2005.
+
+\bibitem{papadias2003query}
+Dimitris Papadias, Jun Zhang, Nikos Mamoulis, and Yufei Tao.
+\newblock Query processing in spatial network databases.
+\newblock In {\em Proceedings of the 29th international conference on Very
+  large data bases-Volume 29}, pages 802--813. VLDB Endowment, 2003.
+
+\bibitem{taniar2013taxonomy}
+David Taniar and Wenny Rahayu.
+\newblock A taxonomy for nearest neighbour queries in spatial databases.
+\newblock {\em Journal of Computer and System Sciences}, 79(7):1017--1039,
+  2013.
+
+\bibitem{tao2003tpr}
+Yufei Tao, Dimitris Papadias, and Jimeng Sun.
+\newblock The tpr*-tree: an optimized spatio-temporal access method for
+  predictive queries.
+\newblock In {\em Proceedings of the 29th international conference on Very
+  large data bases-Volume 29}, pages 790--801. VLDB Endowment, 2003.
+
+\bibitem{Xuan2012}
+Kefeng Xuan.
+\newblock {Range / Region-Related Quires Processing in Spatial Databases by
+  Clayton School of Information Technology Monash University}.
+\newblock (0190), 2012.
+
+\bibitem{yiu2005aggregate}
+Man~Lung Yiu, Nikos Mamoulis, and Dimitris Papadias.
+\newblock Aggregate nearest neighbor queries in road networks.
+\newblock {\em Knowledge and Data Engineering, IEEE Transactions on},
+  17(6):820--833, 2005.
+
+\end{thebibliography}
