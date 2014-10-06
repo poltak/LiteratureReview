@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.8.13)  1 OCT 2014 12:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.8.13)  6 OCT 2014 20:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**LiteratureReview.tex -recorder
+**LiteratureReview
 (./LiteratureReview.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
@@ -306,9 +306,6 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip48
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/placeins/placeins.sty
-Package: placeins 2005/04/18  v 2.2
-)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen134
@@ -347,20 +344,20 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 (./LiteratureReview.aux)
 \openout1 = `LiteratureReview.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -424,15 +421,15 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \celsius on input line 29.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 29.
+LaTeX Info: Redefining \celsius on input line 28.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 28.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 29.
-Package gensymb Info: Using \Omega for \ohm on input line 29.
+LaTeX Info: Redefining \ohm on input line 28.
+Package gensymb Info: Using \Omega for \ohm on input line 28.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -440,7 +437,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring OFF on input line 29.
+Package hyperref Info: Link coloring OFF on input line 28.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -449,19 +446,19 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count127
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 28.
+LaTeX Info: Redefining \pageref on input line 28.
+LaTeX Info: Redefining \nameref on input line 28.
 
 (./LiteratureReview.out) (./LiteratureReview.out)
 \@outlinefile=\write3
 \openout3 = `LiteratureReview.out'.
 
 
-<MonashCrest.pdf, id=120, 396.48125pt x 420.57124pt>
+<MonashCrest.pdf, id=132, 396.48125pt x 420.57124pt>
 File: MonashCrest.pdf Graphic file (type pdf)
  <use MonashCrest.pdf>
-Package pdftex.def Info: MonashCrest.pdf used on input line 44.
+Package pdftex.def Info: MonashCrest.pdf used on input line 43.
 (pdftex.def)             Requested size: 142.26378pt x 150.91139pt.
 
 [1
@@ -481,7 +478,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ! Undefined control sequence.
 <argument> ...\tmspace +\thinmuskip {.1667em}\OMS 
                                                   /cmsy/m/n/10.95 \char 2}{}...
-l.27 .../n/10.95 \char 2}{}{} Tree}{5}{section.11}
+l.28 .../n/10.95 \char 2}{}{} Tree}{5}{section.12}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -492,7 +489,7 @@ and I'll forget about whatever was undefined.
 ! Improper discretionary list.
 <recently read> }
                  
-l.27 .../n/10.95 \char 2}{}{} Tree}{5}{section.11}
+l.28 .../n/10.95 \char 2}{}{} Tree}{5}{section.12}
                                                   
 Discretionary lists must contain only boxes and kerns.
 
@@ -502,52 +499,57 @@ The following discretionary sublist has been deleted: []
 \tf@toc=\write4
 \openout4 = `LiteratureReview.toc'.
 
- [2] [1] [2] [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 169.
-
+ [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 91.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 169.
-[4]
-Overfull \hbox (64.50731pt too wide) in paragraph at lines 200--213
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 91.
+ [1]
+[2] [3] [4] [5]
+Overfull \hbox (64.50731pt too wide) in paragraph at lines 269--282
 [][] 
  []
 
-[5] (./LiteratureReview.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 219.
- [6
+[6] (./LiteratureReview.bbl
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ” in font cmr10!
+ [7
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 219.
+] [8])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 290.
+ [9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 290.
  (./LiteratureReview.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 219.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 219.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 290.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 290.
 Package rerunfilecheck Info: File `LiteratureReview.out' has not changed.
-(rerunfilecheck)             Checksum: CCF97479A2CADA46930B2A35BDD38187;1971.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 219.
+(rerunfilecheck)             Checksum: AD6BCA7F230862A90F546DFA94EDB9E5;2215.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 290.
  ) 
 Here is how much of TeX's memory you used:
- 8273 strings out of 493117
- 124389 string characters out of 6135433
- 220096 words of memory out of 5000000
- 11570 multiletter control sequences out of 15000+600000
- 10758 words of font info for 40 fonts, out of 8000000 for 9000
+ 8309 strings out of 493117
+ 125011 string characters out of 6135433
+ 220728 words of memory out of 5000000
+ 11584 multiletter control sequences out of 15000+600000
+ 11117 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,7n,40p,831b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,7n,40p,817b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on LiteratureReview.pdf (8 pages, 138785 bytes).
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on LiteratureReview.pdf (11 pages, 156465 bytes).
 PDF statistics:
- 271 PDF objects out of 1000 (max. 8388607)
- 248 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
- 238 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 353 PDF objects out of 1000 (max. 8388607)
+ 325 compressed objects within 4 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 262 words of extra memory for PDF output out of 10000 (max. 10000000)
 

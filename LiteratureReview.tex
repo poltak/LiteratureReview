@@ -13,8 +13,7 @@
 \usepackage{subcaption}
 \usepackage{afterpage}
 \usepackage[hidelinks]{hyperref}
-\usepackage[sec\\\
-ion]{placeins}
+
 
 \usepackage[hidelinks]{hyperref}
 
@@ -23,7 +22,6 @@ ion]{placeins}
 \usepackage[parfill]{parskip}
 
 \graphicspath{{./Figures/}}
-\long\def\/*#1*/{}
 
 \usepackage{titlesec}
 
@@ -85,14 +83,42 @@ In order to propose a query processing solution to this query, the various neare
 
 Below is a graphical representation of the various spatial queries and the various algorithms proposed by authors to solve the scenario at hand. In order to begin attempting to propose a query processing solution for the problem at hand the understanding of the work done by previous authors in order to solve similar problems needs to be understood. 
 
-\/*
+The important works here are
+
+~\cite{berchtold1998fast}.
+
+\begin{itemize}
+	\item Reverse Nearest Neighbour by Korn et al. (2000)~\cite{korn2000influence}
+	\item Group Nearnest Neighbour by Papadias et al. (2004)~\cite{papadias2004group}.
+	\item Group Nearest Group by Deng et al. (2012)~\cite{deng2012group}
+	\item Optimum Region by Xuan (2012)~\cite{Xuan2012}
+\end{itemize}
+
+In order to process the various queries in the spatial road network are as follows
+
+\begin{itemize}
+	\item Voronoi Diagrams 
+	\item VN$^3$ ~\cite{kolahdouzan2004voronoi}
+	\item Network Voronoi Diagram~\cite{xuan2009network}
+\end{itemize}
+
+Formal defintion:
+
+
+
 \subsection{Overview of Spatial Queries}
 
 This diagram is based on deriving information from ~\cite{taniar2013taxonomy}.
 
 \section{Nearest Neighbour}
 
+~\cite{jensen2003nearest}
+
+~\cite{preparatat1985computational}
+
 The nearest neighbour problem is considered to be one of the best known problems in computer science. 
+
+~\cite{roussopoulos1995nearest}
 
 \subsection{Range Euclidean Restriction}
 
@@ -106,11 +132,25 @@ Aggregate nearest neighbour queries returns the object that minimizes an aggrega
 
 ~\cite{ferhatosmanoglu2001constrained}.
 
-\subsection{Reverse Nearest Neighbour}
+\subsection{Reverse \textit{k}-Nearest Neighbour (R\textit{k}NN)}
+
+The goal of a reverse \textit{k}-nearest neighbour query is to identify the ``influence'' of query object on the whole data set~\cite{achtert2006efficient}.
 
 A Reverse Nearest Neighbour (RNN) search is a method to retrieve all objects that consider the query point as the nearest neighbour. An example would be like when a marketing application in which the issue is to determine the business impact of opening an outlet of Company \textit{A} at a given location. A simple task is to determine the segment of \textit{A}'s customer who would be likely to use this new facility~\cite{korn2000influence}. Korn et al (2000) broken this down into two cases which are static and dynamic cases and also formalised a novel notion of influence based on reverse nearest neighbour queries and its variants. Influence sets based on reverse nearest neighbour (RNN) queries seem to caputre the notion of influence based on the example stated by them.
 
-Cheema et al (2011), suggested a more generic concept called \textbf{influence zone} and showed that the influence zone can be used to efficiently compute the influence sets. This influence zone has various applications in location based services and decision support systems. This is because the influence zone may be used for market analysis as well as targeted marketing~\cite{cheema2011influence}. This concept is more generic compared to the notation of influence set proposed by Korn et al (2000). An RNN query is independant of interest, and 
+Cheema et al (2011), suggested a more generic concept called \textbf{influence zone} and showed that the influence zone can be used to efficiently compute the influence sets. This influence zone has various applications in location based services and decision support systems. This is because the influence zone may be used for market analysis as well as targeted marketing~\cite{cheema2011influence}. This concept is more generic compared to the notation of influence set proposed by Korn et al (2000). 
+
+This methodology to generate the influence zone of each location will be used in order to generate the influnce zone of each object of interest. 
+
+
+\section{Constrained Range Search}
+~\cite{xuan2011constrained}.
+
+~\cite{kolahdouzan2004voronoi}
+
+~\cite{zhao2008incremental}
+
+~\cite{hu2006fast}
 
 \section{Reverse Region Query}
 
@@ -197,6 +237,30 @@ Table from R+ tree goes here.
 ~\cite{tao2003tpr}.
 
 \section{Voronoi Diagram}
+
+~\cite{shahabi2003road}
+
+Okabe et al in \cite{okabe2009spatial} presented a thorough discussion on regular and network Voronoi diagrams. 
+
+~\cite{de2000computational}.
+
+~\cite{du1999centroidal}
+
+~\cite{aurenhammer1991voronoi}
+
+~\cite{safar2009voronoi}.
+
+~\cite{sibson1981brief}
+
+~\cite{taniar2011spatial}
+
+~\cite{deng2007multi}
+
+Kolahdouzan et al in ~\cite{kolahdouzan2004voronoi} suggested an approach termed Voronoi based Network Nearest Neighbour (V$N^3$), which reduces the problem of distance computation in a very large network, in to the problem distance computation in a number of much smaller networks plus some additional table lookups. This is achieved by generating a first-order network Voronoi diagram over the points of interest.
+
+\subsection{On-line Progressive Expansion (OPE)}
+
+\subsection{Off-line Precalculation (OPC)}
 
 \section{Comparison}
 

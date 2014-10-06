@@ -6,47 +6,49 @@ Database file #1: LiteratureReview.bib
 Warning--can't use both volume and number fields in beckmann1990r
 Warning--can't use both volume and number fields in guttman1984r
 Warning--can't use both volume and number fields in korn2000influence
+Warning--empty journal in preparatat1985computational
+Warning--can't use both volume and number fields in roussopoulos1995nearest
 Warning--empty journal in Xuan2012
 Warning--there's a number but no volume in Xuan2012
-You've used 15 entries,
+You've used 34 entries,
             2118 wiz_defined-function locations,
-            589 strings with 6673 characters,
-and the built_in function-call counts, 6315 in all, are:
-= -- 645
-> -- 283
-< -- 10
-+ -- 114
-- -- 96
-* -- 450
-:= -- 981
-add.period$ -- 52
-call.type$ -- 15
-change.case$ -- 91
+            700 strings with 10288 characters,
+and the built_in function-call counts, 14158 in all, are:
+= -- 1439
+> -- 673
+< -- 20
++ -- 269
+- -- 230
+* -- 1015
+:= -- 2224
+add.period$ -- 117
+call.type$ -- 34
+change.case$ -- 213
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 251
-empty$ -- 487
-format.name$ -- 96
-if$ -- 1369
+cite$ -- 41
+duplicate$ -- 551
+empty$ -- 1073
+format.name$ -- 230
+if$ -- 3050
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 17
-newline$ -- 78
-num.names$ -- 30
-pop$ -- 107
+int.to.str$ -- 34
+missing$ -- 38
+newline$ -- 173
+num.names$ -- 68
+pop$ -- 246
 preamble$ -- 1
-purify$ -- 78
+purify$ -- 183
 quote$ -- 0
-skip$ -- 184
+skip$ -- 399
 stack$ -- 0
-substring$ -- 433
-swap$ -- 89
-text.length$ -- 10
+substring$ -- 937
+swap$ -- 183
+text.length$ -- 20
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 56
-warning$ -- 5
-while$ -- 61
-width$ -- 17
-write$ -- 174
-(There were 5 warnings)
+type$ -- 128
+warning$ -- 7
+while$ -- 137
+width$ -- 36
+write$ -- 389
+(There were 7 warnings)
