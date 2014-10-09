@@ -77,13 +77,42 @@ Supervisor: Associate Professor David Taniar
 
 \section{Introduction} 
 
-The \textit{Isolated Region} spatial query is a distinctive spatial query because of its requirements. It aims to achieve the very nature of being near a crowd yet not too far that it is isolated. It is visually easy to determine an isolated region given any number of objects bound within a region. However, it mathematically solving this in the terms of both the Euclidean and Spatial distance is challenging. The input of this query will be a set of static data points. $P=\{p_1,....,p_n\}$. Each of these points will denote objects of interests (OOIs). The output of this query will be a region, $R$. This region will be the coined \textit{Isolated Region}.
+A spatial query is a query that returns features based on their spatial relationship with a query geometry. The query of interest here is the \textit{Isolated Region} query. This is a distinctive spatial query in terms of its requirements and the name of it is coined from its requirements. The objective of this query is to find a region where an object can be placed so that it is not in the state of \textit{isolation} and yet still be in the state where it is in a \textit{crowd}. The input of this query will be a set of points, $S = \{p_1,....,p_n\}$ where each point represents an object of interest (OOI). The output of this query will be a region where any object placed within it satifies the criteria.
 
-In order to propose a query processing solution to this query, the various nearest neighbour queries with their query processing solutions will be explored. This literature review attempts to categorize the various spatial query into different categories and identify the ones of interest with regards to solving the spatial query processing scenario at hand. The tradional reverse nearest neighbour query only returns objects, however the inverse version of these queries will return a region. These queries are also called the reverse queries.
+This query consist of two requirements.
+\begin{itemize}
+	\item The object must not be in the state of isolation.
+	\item The object must be in the state where it is in a crowd.
+\end{itemize}
 
-Below is a graphical representation of the various spatial queries and the various algorithms proposed by authors to solve the scenario at hand. In order to begin attempting to propose a query processing solution for the problem at hand the understanding of the work done by previous authors in order to solve similar problems needs to be understood. 
+Previous works has been done in order to satisfy the requirements invidually,  however no work has been done where the two constraints are placed together. Placing the two requirements together changes the way the query needs to be processed and thus this literature review aims to explore the various algorithms and approaches that can be used to solve the query. 
 
-The important works here are
+The definitions of the terms used are as follow.
+
+\textbf{Definition 1} \textit{The state of being a crowd is where the query point is the zone of influence of the maximum number of objects of interest. However, in this query the condition of being in the crowd must be relaxed in order to provide a beneficial solution. Thus, being in a crowd means that the query point must be near the zone of influence of the maximum number of objects.
+}
+
+\textbf{Definition 2} \textit{The state of isolated or isolation means that the object is not under the influence of any objects of interest. This means that it has the least numbers nearest neighbours. }
+
+\textbf{Definition 3} \textit{An Isolated Region is a region where the query point can move freely and still being in state of being in the crowd and not isolated.}
+
+\textbf{Definition 4} \textit{A safe region is an area where the query point can move freely without effecting the query result}.
+
+\textbf{Definition 5} \textit{A zone of influence is a region where by any points or locations or coordinates or pixels in this region will consider this object as its closest object, compared to any other object.}
+
+
+With that, the formalisation of the \textit{Isolated Region} query is as follows. Given a set of points, $p_1,....,p_n$, which are the input. The output of this will be a region in which, it is a safe zone which obeys the two requirements in which the state of any object placed within this safe zone will be in the state of being in a crowd and isolated. This output region maybe of of any shape.
+
+Xuan in ~\cite{Xuan2012} formalised the definition of an \textit{Optimum Region} in which, ``Given a finite set of point objects and a positive value \textit{r}, the optimum region includes all points which can cover the maximum number of objects in the finite set as the center of a circle with radius r.''. This query will satisfy the requirement where the region will has the maximum number of nearest neighbours, however the input of this query will require the value \textit{r}.
+
+Korn and Muthukrishan in~\cite{korn2000influence} formalised the notion of influence based on reverse nearest neighbour queries and its variants. This was called \textit{Influence Set}. This is because the reverse nearest neighbour is not symmetric. However. this concept of influence is often changed depending the application at hand and difficult to formalise. 
+
+Cheema et al (2011), suggested a more generic concept called \textit{influence zone} and showed that the influence zone can be used to efficiently compute the influence sets. This influence zone has various applications in location based services and decision support systems. This is because the influence zone may be used for market analysis as well as targeted marketing~\cite{cheema2011influence}. This concept is more generic compared to the notation of influence set proposed by Korn et al (2000). 
+
+
+\section{Related Works}
+
+~\cite{guting1994introduction}
 
 ~\cite{berchtold1998fast}.
 
@@ -101,9 +130,6 @@ In order to process the various queries in the spatial road network are as follo
 	\item VN$^3$ ~\cite{kolahdouzan2004voronoi}
 	\item Network Voronoi Diagram~\cite{xuan2009network}
 \end{itemize}
-
-Formal defintion:
-
 
 
 \subsection{Overview of Spatial Queries}
@@ -134,16 +160,17 @@ Aggregate nearest neighbour queries returns the object that minimizes an aggrega
 
 \subsection{Reverse \textit{k}-Nearest Neighbour (R\textit{k}NN)}
 
-The goal of a reverse \textit{k}-nearest neighbour query is to identify the ``influence'' of query object on the whole data set~\cite{achtert2006efficient}.
+The goal of a reverse \textit{k}-nearest neighbour query is to identify the ``influence'' of query object on the whole data set~\cite{achtert2006efficient}. 
 
 A Reverse Nearest Neighbour (RNN) search is a method to retrieve all objects that consider the query point as the nearest neighbour. An example would be like when a marketing application in which the issue is to determine the business impact of opening an outlet of Company \textit{A} at a given location. A simple task is to determine the segment of \textit{A}'s customer who would be likely to use this new facility~\cite{korn2000influence}. Korn et al (2000) broken this down into two cases which are static and dynamic cases and also formalised a novel notion of influence based on reverse nearest neighbour queries and its variants. Influence sets based on reverse nearest neighbour (RNN) queries seem to caputre the notion of influence based on the example stated by them.
 
-Cheema et al (2011), suggested a more generic concept called \textbf{influence zone} and showed that the influence zone can be used to efficiently compute the influence sets. This influence zone has various applications in location based services and decision support systems. This is because the influence zone may be used for market analysis as well as targeted marketing~\cite{cheema2011influence}. This concept is more generic compared to the notation of influence set proposed by Korn et al (2000). 
+
 
 This methodology to generate the influence zone of each location will be used in order to generate the influnce zone of each object of interest. 
 
 
 \section{Constrained Range Search}
+
 ~\cite{xuan2011constrained}.
 
 ~\cite{kolahdouzan2004voronoi}
@@ -170,6 +197,8 @@ This is considered to be an expensive problem by definition because of the numbe
 This algorithm utilises the threshold algorithm where it performs incremental NN queries for each point in $Q$ and combines their results~\cite{papadias2004group}. The MQM retrieves the NN for every point in query set $Q$, it sometimes accesses the same tree nodes for different query points and this causes its cost to increase fast with the query set cardinality.
 
 \subsection{Single Point Method}
+
+The single point method introduced by Papadias et al in~\cite{papadias2004group}. 
 
 \subsection{Minimum Bounding Method (MBM)}
 
