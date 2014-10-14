@@ -11,8 +11,14 @@
 \usepackage{setspace} % This is used in the title page
 \usepackage{graphicx} % This is used to load the crest in the title page
 \usepackage{subcaption}
+
+
 \usepackage{afterpage}
 \usepackage[hidelinks]{hyperref}
+
+
+\usepackage{subfig}
+
 
 
 \usepackage[hidelinks]{hyperref}
@@ -77,13 +83,83 @@ Supervisor: Associate Professor David Taniar
 
 \section{Introduction} 
 
-A spatial query is a query that returns features based on their spatial relationship with a query geometry. The query of interest here is the \textit{Isolated Region} query. This is a distinctive spatial query in terms of its requirements and the name of it is coined from its requirements. The objective of this query is to find a region where an object can be placed so that it is not in the state of \textit{isolation} and yet still be in the state where it is in a \textit{crowd}. The input of this query will be a set of points, $S = \{p_1,....,p_n\}$ where each point represents an object of interest (OOI). The output of this query will be a region where any object placed within it satifies the criteria.
+A spatial query is a query that returns features based on their spatial relationship with a query geometry. The query of interest here is the \textit{Isolated Region} query. This is a distinctive spatial query in terms of its requirements and the name of it is coined from its requirements. The objective of this query is to find a region where an object can be placed so that it is not in the state of \textit{isolation} and yet still be in the state where it is in a \textit{crowd}. The input of this query will be a set of points, $S = \{p_1,....,p_n\}$ where each point represents an object of interest (OOI). The output of this query will be a region where any object placed within it satifies the criteria. 
 
-This query consist of two requirements.
+This query should always pick the best region where the object can be placed in.
+
+This query consist of the combination of two requirements which are:
 \begin{itemize}
 	\item The object must not be in the state of isolation.
 	\item The object must be in the state where it is in a crowd.
 \end{itemize}
+
+Before attempting to go further the conditions of each scenario will be further defined. 
+
+Based on Figure \ref{fig:1OOI}, it can be can seen that when only 1 object is used as the input, the conditions are quite clear. Assuming this object A, has a region of influence denoted by a circle around it, so any object placed inside the circle will be under its zone of influence. IT is quite clear that we can place any object that satisfies the condition in this scenario quite easily, because any object placed just outside the circle would be considered to be in the crowd and not isolated. 
+
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.4\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{1OOI}
+  \caption{A subfigure}
+  \label{fig:1OOI}
+\end{subfigure}%
+\begin{subfigure}{.4\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{2OOI}
+  \caption{A subfigure}
+  \label{fig:2OOI}
+\end{subfigure}
+\caption{}
+\label{fig:Condition}
+\end{figure}
+
+Based on Figure \ref{fig:1OOI}, it can be can seen that when only 1 object is used as the input, the conditions are quite clear. Assuming this object A, has a region of influence denoted by a circle around it, so any object placed inside the circle will be under its zone of influence. IT is quite clear that we can place any object that satisfies the condition in this scenario quite easily, because any object placed just outside the circle would be considered to be in the crowd and not isolated. 
+
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.4\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{2OOIClose}
+  \caption{A subfigure}
+  \label{fig:1OOI}
+\end{subfigure}%
+\begin{subfigure}{.4\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{2OOIFar}
+  \caption{A subfigure}
+  \label{fig:2OOIFar}
+\end{subfigure}
+\caption{}
+\label{fig:Condition}
+\end{figure}
+
+
+However this situation becomes more complex when the number of object that are the input are increased. Based on Figure \ref{fig:2OOI}, it can be seen that with 2 objects as the input, the situation of being crowded will be changed. There are also many variations of how these 2 inputs can be. For example, if the distance between these two objects are changed, the state of being in the \textit{crowd} will be different. This is because as it moves further it will be in a state of isolation. The main question here, would be how far out before it considered to be in the isolated state.
+
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.4\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{2OOICloseSolution}
+  \caption{A subfigure}
+  \label{fig:2OOICloseSolution}
+\end{subfigure}%
+\begin{subfigure}{.4\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{2OOIFarSolution}
+  \caption{A subfigure}
+  \label{fig:2OOIFarSolution}
+\end{subfigure}
+\caption{}
+\label{fig:Condition}
+\end{figure}
+
+In Figure \ref{fig:2OOICloseSolution}, it can be seen that the state of being crowded will be in 2 possible place represented by C and D. This is because both of these states are similar in nature. This however is not true when the two objects are far apart. In Figure \ref{fig:2OOIFarSolution}, it is the clear that the crowded state can be satisfied by placing the object in the middle between these two objects. However this situation is not as simple as it seems, because the as two objects move futher away, it is the clear placing the object in between these two will not satisfy the condition of being the crowd. 
+
+This situation further increases in complexity as the number of objects are increased. For example, when the number of input objects are 3, there are more possible variations to this scenario. 
+
 
 Previous works has been done in order to satisfy the requirements invidually,  however no work has been done where the two constraints are placed together. Placing the two requirements together changes the way the query needs to be processed and thus this literature review aims to explore the various algorithms and approaches that can be used to solve the query. 
 
@@ -94,11 +170,16 @@ The definitions of the terms used are as follow.
 
 \textbf{Definition 2} \textit{The state of isolated or isolation means that the object is not under the influence of any objects of interest. This means that it has the least numbers nearest neighbours. }
 
-\textbf{Definition 3} \textit{An Isolated Region is a region where the query point can move freely and still being in state of being in the crowd and not isolated.}
+\textbf{Definition 3} \textit{An Isolated Region is where the object is far away from any related object.}
 
-\textbf{Definition 4} \textit{A safe region is an area where the query point can move freely without effecting the query result}.
+\textbf{Definition 4} \textit{A safe region is an area where the query point can move freely without effecting the query result. For this query, the safe region is where an object can be placed so that it does not violate the conditions.}
 
 \textbf{Definition 5} \textit{A zone of influence is a region where by any points or locations or coordinates or pixels in this region will consider this object as its closest object, compared to any other object.}
+
+\subsection{Formulating of Definitions}
+
+Here the state of being in the \texitit{``crowrd''} will be detailed. For example, if only one query point is given as the input where $S= \{ p_1\}$, the condition of the crowd needs to be defined. 
+
 
 
 With that, the formalisation of the \textit{Isolated Region} query is as follows. Given a set of points, $p_1,....,p_n$, which are the input. The output of this will be a region in which, it is a safe zone which obeys the two requirements in which the state of any object placed within this safe zone will be in the state of being in a crowd and isolated. This output region maybe of of any shape.
@@ -218,7 +299,7 @@ Group Nearest Group (GNG) query can be defined as a query which finds one data p
 
 The scenario of a GNG query is as follows. A security service provider plans to set up several new branches to serve several business districts which can be represented by a set of land marks, such as well-known buildings. The max number of branches is usually on constrainted by factors such as business cost. Under this constraint the provider wishes to select branch locations from many choices such that the reponse time to security alarms can be minimised that is the average distance between these landmarks to the nearest branch is minimal.
 
-The GNG algorithm has its useful because it will find a meeting point from a set of groups, however it requires 2 set of inputs which are the
+The GNG algorithm has its useful because it will find a meeting point from a set of groups, however it requires 2 set of inputs which are the a set of data points. 
 
 
 Query points with different weights are also useful in many situations~\cite{deng2012group}.
@@ -232,12 +313,9 @@ Query points with different weights are also useful in many situations~\cite{den
 \subsection{Zone of Influence}
  
 
-\section{Optimum Region} 
+\section{Optimum Region Query} 
 
-An optimum region query is as follows: 
-
-Another spatial query of interest is the \textit{Optimum Region}. This problem appears in Euclidean space. Optimum region is defined as a region which includes all the points which can cover the maximum number of objects in the finite set as the center of a radius \textit{r}~\cite{Xuan2012}. The objective of the optimum region search is to find a region where the center of a circle with a fixed radius can be located to cover most objects of interest in the given set. An example of an optimum region is as follows:
-
+Another spatial query of interest is the \textit{Optimum Region}. This problem appears in Euclidean space. Optimum region is defined as a region which includes all the points which can cover the maximum number of objects in the finite set as the center of a radius \textit{r}~\cite{Xuan2012}. The objective of the optimum region search is to find a region where the center of a circle with a fixed radius can be located to cover most objects of interest in the given set. An example of an optimum region query is as follows:
 
 \begin{itemize}      
   \item Build a hospital in a community and let most
@@ -246,7 +324,7 @@ resident reach to the hospital within 20 minutes or 15 km.
 which is 20 meters, to cover most Wi-Fi   devices in the company.
 \end{itemize}
 
-The input for the optimum region are a set of object of interest and the output is the optimum region. 
+It is noted however, the optimum region query does not really hand the problem scenario at hand. This is because the optimum region aims to retrieve the area with the maximum number of intersection regions. An example of an output from the optimum region is as follows.
 
 \subsection{Circle Partition and Arcs Superposition (CPAS)}
 This algorithm relies on the polar coordinates of the system.
