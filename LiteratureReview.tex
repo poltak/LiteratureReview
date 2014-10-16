@@ -82,8 +82,9 @@ Supervisor: Associate Professor David Taniar
 \renewcommand{\thepage}{\arabic{page}}
 
 \section{Introduction} 
+\label{Introduction}
 
-A spatial query is a query that returns features based on their spatial relationship with a query geometry. The query of interest here is the \textit{Isolated Region} query. This is a distinctive spatial query in terms of its requirements and the name of it is coined from its requirements. The objective of this query is to find a region where an object can be placed so that it is not in the state of \textit{isolation} and yet still be in the state where it is in a \textit{crowd}. The input of this query will be a set of points, $S = \{p_1,....,p_n\}$ where each point represents an object of interest (OOI). The output of this query will be a region where any object placed within it satifies the criteria. In order to properly solve, this each object needs to create a region of influence. The reasoning behind this, is because it is important to know the region of influence of each object in order to properly define a solution for this query.
+A spatial query is a query that returns features based on their spatial relationship with a query geometry. The query of interest here is the \textit{Isolated Region} query. This is a distinctive spatial query in terms of its requirements and the name of it is coined from its requirements. The objective of this query is to find a region where an object can be placed so that it is not in the state of \textit{isolation} and yet still be in the state where it is in a \textit{crowd}. The input of this query will be a set of points, $S = \{p_1,....,p_n\}$ where each point represents an object of interest (OOI). The output of this query will be a region where any object placed within it satisfies the criteria. In order to properly solve, this each object needs to create a region of influence. The reasoning behind this, is because it is important to know the region of influence of each object in order to properly define a solution for this query.
 
 This query should always pick the best region where the object can be placed in. In other words, the number of solutions to this query can be more than 1 regions. 
 
@@ -178,7 +179,7 @@ This situation further increases in complexity as the number of objects are incr
 \end{figure}
 
 
-Previous works has been done in order to satisfy the requirements invidually,  however no work has been done where the two constraints are placed together. Placing the two requirements together changes the way the query needs to be processed and thus this literature review aims to explore the various algorithms and approaches that can be used to solve the query. 
+Previous works has been done in order to satisfy the requirements individually,  however no work has been done where the two constraints are placed together. Placing the two requirements together changes the way the query needs to be processed and thus this literature review aims to explore the various algorithms and approaches that can be used to solve the query. 
 
 The definitions of the terms used are as follow.
 
